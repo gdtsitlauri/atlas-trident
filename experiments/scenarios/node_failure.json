@@ -1,0 +1,10 @@
+{
+  "name": "node_failure",
+  "description": "Primary node failure requiring failover and recovery",
+  "default_steps": 20,
+  "events": [
+    {"step": 3, "type": "node_failure", "node_id": "node-2", "duration": 4},
+    {"step": 8, "type": "recover_node", "node_id": "node-2"},
+    {"step": 10, "type": "overload", "service_id": "svc-2", "factor": 1.3}
+  ]
+}

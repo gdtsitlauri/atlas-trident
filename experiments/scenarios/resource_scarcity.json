@@ -1,0 +1,11 @@
+{
+  "name": "resource_scarcity",
+  "description": "Capacity reduction and constrained compute environment",
+  "default_steps": 20,
+  "events": [
+    {"step": 2, "type": "resource_scarcity", "node_id": "node-1", "ratio": 0.60},
+    {"step": 4, "type": "resource_scarcity", "node_id": "node-2", "ratio": 0.70},
+    {"step": 6, "type": "resource_scarcity", "node_id": "node-3", "ratio": 0.75},
+    {"step": 8, "type": "overload", "service_id": "svc-2", "factor": 1.6}
+  ]
+}

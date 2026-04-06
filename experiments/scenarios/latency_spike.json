@@ -1,0 +1,10 @@
+{
+  "name": "latency_spike",
+  "description": "Network latency spike and transient congestion",
+  "default_steps": 20,
+  "events": [
+    {"step": 4, "type": "latency_spike", "node_id": "node-1", "extra_ms": 220},
+    {"step": 6, "type": "latency_spike", "node_id": "node-3", "extra_ms": 160},
+    {"step": 11, "type": "latency_spike", "node_id": "node-1", "extra_ms": 120}
+  ]
+}

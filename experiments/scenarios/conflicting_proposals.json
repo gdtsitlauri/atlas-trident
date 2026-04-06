@@ -1,0 +1,11 @@
+{
+  "name": "conflicting_proposals",
+  "description": "Forces proposal conflicts under competing stressors",
+  "default_steps": 20,
+  "events": [
+    {"step": 2, "type": "overload", "service_id": "svc-1", "factor": 1.9},
+    {"step": 2, "type": "resource_scarcity", "node_id": "node-3", "ratio": 0.65},
+    {"step": 3, "type": "latency_spike", "node_id": "node-2", "extra_ms": 210},
+    {"step": 5, "type": "overload", "service_id": "svc-3", "factor": 1.5}
+  ]
+}

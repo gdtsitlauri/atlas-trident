@@ -1,0 +1,33 @@
+version: "3.9"
+
+services:
+  atlas-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: uvicorn atlas.api.main:app --host 0.0.0.0 --port 8000
+    environment:
+      - ATLAS_CONFIG=config/default.toml
+      - ATLAS_LOGS_DIR=logs/latest
+      - ATLAS_BASELINE_MODE=full_trident
+      - ATLAS_SEED=42
+      - ATLAS_DETERMINISTIC=true
+    volumes:
+      - ./logs:/app/logs
+      - ./config:/app/config:ro
+    ports:
+      - "8000:8000"
+
+  atlas-dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: streamlit run dashboard/app.py --server.address 0.0.0.0 --server.port 8501
+    environment:
+      - ATLAS_LOGS_DIR=logs/latest
+    volumes:
+      - ./logs:/app/logs
+    ports:
+      - "8501:8501"
+    depends_on:
+      - atlas-api

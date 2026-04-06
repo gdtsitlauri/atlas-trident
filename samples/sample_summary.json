@@ -1,0 +1,24 @@
+{
+  "scenario": "node_failure",
+  "cycles": 20,
+  "decision_latency_ms_avg": 11.42,
+  "consensus_latency_ms_avg": 5.97,
+  "sla_violations_total": 9,
+  "recovery_time_ms_max": 360.0,
+  "resource_utilization_avg": 0.73,
+  "cost_proxy_avg": 2.31,
+  "action_success_rate": 0.84,
+  "governance_overhead_total": 218,
+  "total_proposals": 60,
+  "total_approved": 38,
+  "trust_scores_final": {
+    "agent-1": 0.66,
+    "agent-2": 0.59,
+    "agent-3": 0.63
+  },
+  "rl_reward_trends": {
+    "agent-1": 0.11,
+    "agent-2": 0.06,
+    "agent-3": 0.08
+  }
+}

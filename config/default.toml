@@ -1,0 +1,46 @@
+[system]
+seed = 42
+deterministic_mode = true
+twin_nodes = 3
+governance_nodes = 3
+episode_steps = 20
+what_if_horizon = 3
+max_candidates = 6
+planner_mode = "mock"
+baseline_mode = "full_trident"
+
+[paths]
+logs_dir = "logs/latest"
+ledger_db = "logs/latest/atlas_ledger.db"
+
+[trident]
+alpha = 0.34
+beta = 0.23
+gamma = 0.22
+lambda_penalty = 0.12
+mu = 0.05
+nu = 0.18
+
+[rl]
+learning_rate = 0.15
+discount_factor = 0.92
+epsilon = 0.10
+replay_size = 512
+
+[policy]
+max_service_instances = 5
+max_node_cpu_utilization = 0.95
+max_node_memory_utilization = 0.95
+min_healthy_nodes = 2
+
+[sla]
+latency_target_ms = 180.0
+availability_target = 0.99
+
+[llm]
+mode = "mock"
+ollama_url = "http://localhost:11434/api/generate"
+ollama_model = "llama3.1:8b-instruct-q4_0"
+openai_url = "http://localhost:8001/v1/chat/completions"
+openai_model = "gpt-4o-mini"
+request_timeout_sec = 15.0
