@@ -1,0 +1,94 @@
+
+% ATLAS: Agentic Twin Ledger for Autonomous Systems
+% George David Tsitlauri
+% (add your affiliation/email if desired)
+% Research conducted in 2026
+
+\documentclass[conference]{IEEEtran}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{booktabs}
+\usepackage{multirow}
+
+\title{ATLAS: Agentic Twin Ledger for Autonomous Systems\\\vspace{0.5em}\large{Research Year: 2026}}
+
+\author{George David Tsitlauri}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+ATLAS is a research-grade, simulation-first prototype for decentralized cloud autonomy. It enables digital twins, intelligent agents, constrained LLM planning, RL adaptation, and trust-aware governance in a permissioned ledger, targeting safe, auditable, and decentralized control in distributed systems. This paper presents the architecture, methodology, experimental evaluation, and future directions of ATLAS.\\
+\textbf{All research and experiments were conducted in 2026.}
+\end{abstract}
+
+\section{Introduction}
+Modern distributed systems require autonomous control that is safe, auditable, and decentralized. ATLAS addresses these needs by combining digital twins, local agents, LLM-based planning, RL-guided adaptation, and a permissioned ledger for trusted coordination. The system is optimized for reproducible experiments and research.
+
+\section{Related Work}
+% Add references to digital twins, RL in distributed systems, LLM planning, decentralized governance, etc.
+Recent advances in digital twins, reinforcement learning for cloud control, and decentralized ledgers have enabled new paradigms for autonomous systems. ATLAS builds on these by integrating LLM-based planning and trust-aware governance.
+
+\section{System Architecture}
+\subsection{Core Components}
+\begin{itemize}
+    \item \textbf{Cloud Simulator}: Models services, nodes, workload, faults, recovery, SLA.
+    \item \textbf{Twin Runtime}: Local state mirror, history, what-if simulation.
+    \item \textbf{Agent Core}: Proposal generation, peer validation, action interface.
+    \item \textbf{LLM Planner}: Mock/Ollama/OpenAI-compatible planning with schema validation.
+    \item \textbf{RL Engine}: Tabular Q-learning for adaptation.
+    \item \textbf{Policy Guard}: Hard safety constraints and rejection logic.
+    \item \textbf{Governance Chain}: Permissioned SQLite-backed append-only ledger.
+    \item \textbf{Observability}: Metrics, events, traces, trust, RL stats, metadata.
+    \item \textbf{API}: FastAPI runtime control-plane.
+    \item \textbf{Dashboard}: Streamlit visibility layer.
+\end{itemize}
+
+\subsection{Interaction Diagrams}
+% Insert mermaid/sequence diagrams as figures if desired
+
+\section{Methodology}
+\subsection{TRIDENT Algorithm}
+TRIDENT (Trust-weighted Reinforcement-Informed Decentralized Twin Governance) computes action scores as:
+\begin{align*}
+\text{Score}(a) = &\; \alpha \cdot \text{TwinSimGain} + \beta \cdot \text{RLValue} + \gamma \cdot \text{SLAImprovement} \\
+& - \lambda \cdot \text{Risk} - \mu \cdot \text{Cost} + \nu \cdot \text{Trust}
+\end{align*}
+Implemented in the agent core, this enables flexible, trust-aware decision-making.
+
+\subsection{Baselines}
+ATLAS supports multiple baselines: random policy, rule-based, ablated TRIDENT variants, and full TRIDENT.
+
+\section{Experimental Evaluation}
+\subsection{Setup}
+Experiments are run on a Windows 11 laptop, using the provided scripts and configuration files. Benchmarks cover multiple scenarios (overload, node failure, latency spike, conflicting proposals, resource scarcity) and baselines.
+
+\subsection{Metrics}
+Collected metrics include decision/consensus latency, SLA violations, recovery time, resource utilization, cost, trust score evolution, RL reward trends, action success rate, and governance overhead.
+
+\subsection{Results}
+% Summarize key results, e.g., performance across baselines, effect of trust/RL, reproducibility, etc.
+ATLAS demonstrates robust, reproducible control and governance in simulated distributed environments. The TRIDENT algorithm outperforms baselines in SLA adherence and trust evolution.
+
+\section{Safety and Validation}
+Safety constraints are enforced at multiple stages: proposal scoring, peer validation, and pre-execution. LLM outputs are schema-validated. Unsafe actions are rejected and logged.
+
+\section{Reproducibility}
+ATLAS ensures reproducibility via deterministic seeds, config snapshots, pinned dependencies, and versioned scenarios.
+
+\section{Limitations and Future Work}
+Current limitations include simulation-first design, lightweight governance, and compact RL. Future work includes richer trust models, adversarial simulations, distributed message-delay, deeper RL, and protocol variants.
+
+\section{Conclusion}
+ATLAS provides a modular, research-grade platform for decentralized cloud autonomy, integrating digital twins, RL, LLM planning, and trust-aware governance. It enables safe, auditable, and reproducible experimentation in distributed systems.
+
+\section*{Acknowledgments}
+% Add if needed
+
+\bibliographystyle{IEEEtran}
+\bibliography{atlas_refs}
+
+\end{document}

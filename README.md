@@ -1,6 +1,14 @@
 # ATLAS - Agentic Twin Ledger for Autonomous Systems
 
+
 ATLAS is a research-grade, simulation-first prototype for decentralized cloud autonomy.
+
+---
+**Research Paper:**
+This project is accompanied by a full research paper describing the architecture, methodology, and experimental results of ATLAS. The research and all experiments were conducted in 2026.
+
+You can find the paper in [paper/atlas_paper.tex](paper/atlas_paper.tex).
+---
 
 It preserves the core ATLAS identity:
 - digital twins per service/node
