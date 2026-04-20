@@ -1,5 +1,9 @@
 # ATLAS - Agentic Twin Ledger for Autonomous Systems
 
+**Author:** George David Tsitlauri  
+**Affiliation:** Dept. of Informatics & Telecommunications, University of Thessaly, Greece  
+**Contact:** gdtsitlauri@gmail.com  
+**Year:** 2026
 
 ATLAS is a research-grade, simulation-first prototype for decentralized cloud autonomy.
 
@@ -372,3 +376,15 @@ CI workflow included in:
 - deeper RL experiments under controlled resource budgets
 - configurable governance protocol variants
 - broader statistical benchmarking across more seeds and workloads
+
+## Citation
+
+```bibtex
+@misc{tsitlauri2026atlas,
+  author = {George David Tsitlauri},
+  title  = {ATLAS: Agentic Twin Ledger for Autonomous Systems},
+  year   = {2026},
+  institution = {University of Thessaly},
+  email  = {gdtsitlauri@gmail.com}
+}
+```
