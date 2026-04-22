@@ -33,7 +33,6 @@ from typing import Any
 
 try:
     import boto3
-    from botocore.exceptions import BotoCoreError, ClientError
     _BOTO3_AVAILABLE = True
 except ImportError:
     _BOTO3_AVAILABLE = False

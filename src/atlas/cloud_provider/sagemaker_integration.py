@@ -36,9 +36,6 @@ from typing import Any
 
 try:
     import boto3
-    import sagemaker
-    from sagemaker.estimator import Estimator
-    from sagemaker.predictor import Predictor
     _SM_AVAILABLE = True
 except ImportError:
     _SM_AVAILABLE = False

@@ -24,7 +24,6 @@ import json
 import os
 import zipfile
 from io import BytesIO
-from pathlib import Path
 
 try:
     import boto3

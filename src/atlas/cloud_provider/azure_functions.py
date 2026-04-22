@@ -20,13 +20,12 @@ Usage
 
 from __future__ import annotations
 
-import json
 import os
 from typing import Any
 
 try:
-    from azure.mgmt.web import WebSiteManagementClient
     from azure.identity import DefaultAzureCredential
+    from azure.mgmt.web import WebSiteManagementClient
     _AZURE_MGMT_AVAILABLE = True
 except ImportError:
     _AZURE_MGMT_AVAILABLE = False
