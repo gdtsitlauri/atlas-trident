@@ -1,8 +1,9 @@
 # ATLAS - Agentic Twin Ledger for Autonomous Systems
 
 **Author:** George David Tsitlauri  
-**Affiliation:** Dept. of Informatics & Telecommunications, University of Thessaly, Greece  
 **Contact:** gdtsitlauri@gmail.com  
+**Website:** gdtsitlauri.dev  
+**GitHub:** github.com/gdtsitlauri  
 **Year:** 2026
 
 ATLAS is a research-grade, simulation-first prototype for decentralized cloud autonomy.
@@ -69,6 +70,7 @@ flowchart LR
 - governance_chain: permissioned SQLite-backed append-only block ledger
 - observability: metrics, events, traces, trust, RL stats, metadata snapshots
 - api: FastAPI runtime control-plane
+- cloud_provider: optional AWS Lambda, SageMaker, and Azure Functions integration helpers
 - dashboard: Streamlit visibility layer
 - experiments and benchmarking: repeatable scenario and baseline comparison runner
 
@@ -161,6 +163,7 @@ atlas/
     governance_chain/
     policy_guard/
     observability/
+    cloud_provider/
     api/
     baselines.py
     experiment_runner.py
